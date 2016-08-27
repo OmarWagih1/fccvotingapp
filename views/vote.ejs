@@ -87,9 +87,9 @@ Data.addColumn('number', 'Count');
         <% var num=0; for(var i =0;i< dat.length;i++){
           num += dat[i][1]; }
         if(num>0){ %>
-  <div id="chart_div" style="margin-left:600px"></div>
+  <div id="chart_div" style="float:right;"></div>
     <form id="form" action="/polls/<%= votes._id%>" method="post">
-    <div style="margin-top:-250px;">
+    <div style="margin-top:50px;">
     <% } else { %>
     <form id="form" action="/polls/<%= votes._id%>" method="post">
     <div style="display:block; margin-top:100px;">
