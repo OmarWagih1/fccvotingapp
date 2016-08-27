@@ -40,11 +40,18 @@ router.get('/mypolls', function(req, res, next) {
 router.post('/addpoll', function(req,res){
   var title=req.body.title;
     var vot= req.body.votes.split('-');
+    if(title==='' || vot[0] ==='')
+    {
+      res.redirect('/addpoll');
+    }
+    else {
    var qote=[];
     for(var i=0;i<vot.length;i++){
         qote.push([vot[i],0]);
     }
    Vote.collection.insert({list:req.user.id, title:title, Votes:qote});
+   res.redirect('/');
+    }
 });
 router.get('/polls/:id',function(req,res){
   var data = [];
@@ -60,6 +67,7 @@ router.get('/polls/:id',function(req,res){
         res.render('vote',{votes:docs, user:req.user, dat:data});
         
       });
+      
 });
 router.post('/polls/:id',function(req,res){
   var i = req.url.split('/')[2];
