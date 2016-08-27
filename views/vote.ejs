@@ -97,7 +97,7 @@ Data.addColumn('number', 'Count');
         <select name="Values" class="styled-select">
           <option disabled selected value> -- select an option -- </option>
             <% for(var i=0;i<votes.Votes.length;i++){ %>
-            <option value= <%= votes.Votes[i][0]%> ><%= votes.Votes[i][0]%></option>
+             <option value= "<%= votes.Votes[i][0]%>"><%= votes.Votes[i][0]%></option>
             <% } %>
         </select>
         <input type="text" name="extraoption" placeholder="Extra vote" class="style-3"></input>
