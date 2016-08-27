@@ -1,0 +1,21 @@
+
+<% include partials/head %>  
+
+  <body>
+ 
+        <div class="jumbotron" style="margin: 40 40 20 40px; border-radius:10px;">
+        <h1 style ="text-align:left; font-weight:bold;">Make your poll!</h1>
+   <form action = "/addpoll" method = "post" enctype="application/x-www-form-urlencoded">
+       <p style="font-weight:bold;">Your Title:</p>
+      <input id="title" name="title"></input>
+  <br>
+  <p style="font-weight:bold; margin-top:10px;"> Your options, please seperate them by a -  :</p>
+  <input id="vtes" name="votes"></input>
+  <input class="myButton" type="submit"  name="submit" value =" Submit" id="ara"></input>
+  </form>
+</div>
+
+</div>
+
+  </body>
+</html>  
